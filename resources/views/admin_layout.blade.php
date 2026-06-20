@@ -22,6 +22,7 @@
     <link href="{{asset('backend/css/add_category_product.css')}}" rel="stylesheet">
     <link href="{{asset('backend/css/all_category_product.css')}}" rel="stylesheet">
     <link href="{{asset('backend/css/add_coupon.css')}}" rel="stylesheet">
+    <link href="{{asset('backend/css/admin-modern.css')}}" rel="stylesheet">
 
 
 
@@ -42,10 +43,10 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{URL::to('/admin-trang-chu')}}">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-seedling"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">HiusBlack Admin<sup>zzz</sup></div>
+                <div class="sidebar-brand-text mx-3">HiusBlack<sup>Admin</sup></div>
             </a>
 
             <!-- Divider -->
@@ -55,7 +56,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{URL::to('/admin-trang-chu')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Tổng quang</span></a>
+                    <span>Tổng quan</span></a>
             </li>
 
             <!-- Divider -->
@@ -63,14 +64,14 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Main
+                Quản trị
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse1"
                     aria-expanded="true" aria-controls="collapse1">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-users"></i>
                     <span>Quản Lý Tài Khoản</span>
                 </a>
                 <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordionSidebar">
@@ -84,7 +85,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-layer-group"></i>
                     <span>Quản Lý Danh Mục</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -99,7 +100,7 @@
               <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse2"
                     aria-expanded="true" aria-controls="collapse2">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-apple-alt"></i>
                     <span>Quản Lý Sản Phẩm</span>
                 </a>
                 <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionSidebar">
@@ -113,7 +114,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3"
                     aria-expanded="true" aria-controls="collapse3">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-receipt"></i>
                     <span>Quản Lý Đơn Hàng</span>
                 </a>
                 <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionSidebar">
@@ -128,7 +129,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse4"
                     aria-expanded="true" aria-controls="collapse4">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-ticket-alt"></i>
                     <span>Quản Lý khuyến mãi</span>
                 </a>
                 <div id="collapse4" class="collapse" aria-labelledby="heading1" data-parent="#accordionSidebar">
@@ -142,7 +143,7 @@
              <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse5"
                     aria-expanded="true" aria-controls="collapse5">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-medal"></i>
                     <span>Quản Lý Xếp Hạng</span>
                 </a>
                 <div id="collapse5" class="collapse" aria-labelledby="heading1" data-parent="#accordionSidebar">
@@ -157,7 +158,7 @@
              <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6"
                     aria-expanded="true" aria-controls="collapse6">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-chart-line"></i>
                     <span>Quản Lý Thống Kê</span>
                 </a>
                 <div id="collapse6" class="collapse" aria-labelledby="heading1" data-parent="#accordionSidebar">
@@ -184,7 +185,7 @@
              <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse7"
                     aria-expanded="true" aria-controls="collapse7   ">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-star"></i>
                     <span>Quản Lý Đánh Giá</span>
                 </a>
                 <div id="collapse7" class="collapse" aria-labelledby="heading1" data-parent="#accordionSidebar">
@@ -619,6 +620,19 @@ function updatePrice(){
     });
 }
 </script>
+@php
+    session()->forget([
+        'message',
+        'error',
+        'success',
+        'warning',
+        'info',
+        'status',
+        'message_category_product',
+        'message_product',
+        'error_product',
+    ]);
+@endphp
 </body>
 
 </html>

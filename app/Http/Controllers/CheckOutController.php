@@ -106,8 +106,8 @@ class CheckOutController extends Controller
         return [
             'url' => 'https://sandbox.vnpayment.vn/paymentv2/vpcpay.html',
             'return_url' => url('/vnpay-return'),
-            'tmn_code' => 'HTA3TRAF',
-            'hash_secret' => '0C2OZPME1GF7OBX2UKPQU89758M570UP',
+            'tmn_code' => 'ZCOU90Y8',
+            'hash_secret' => 'M087TK3P4AI5UBER8L61M6S0X70SZ21V',
         ];
     }
 

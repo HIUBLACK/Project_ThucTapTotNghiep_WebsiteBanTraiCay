@@ -1053,6 +1053,20 @@
     </script>
     @endif
 
+    @php
+        session()->forget([
+            'message',
+            'error',
+            'success',
+            'warning',
+            'info',
+            'status',
+            'message_category_product',
+            'message_product',
+            'error_product',
+        ]);
+    @endphp
+
 </body>
 
 </html>
