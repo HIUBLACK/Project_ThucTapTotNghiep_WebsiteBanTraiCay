@@ -20,6 +20,7 @@
     <!-- Custom styles for this template-->
     <link href="{{asset('backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
     <link href="{{asset('backend/css/login.css')}}" rel="stylesheet">
+    <link href="{{asset('backend/css/admin-login-modern.css')}}" rel="stylesheet">
 
 </head>
 
@@ -100,6 +101,20 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{asset('backend/js/sb-admin-2.min.js')}}"></script>
+
+    @php
+        session()->forget([
+            'message',
+            'error',
+            'success',
+            'warning',
+            'info',
+            'status',
+            'message_category_product',
+            'message_product',
+            'error_product',
+        ]);
+    @endphp
 
 </body>
 

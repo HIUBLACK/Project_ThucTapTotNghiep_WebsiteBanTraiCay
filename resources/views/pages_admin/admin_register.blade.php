@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="{{asset('backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
     <link href="{{asset('backend/css/register.css')}}" rel="stylesheet">
+    <link href="{{asset('backend/css/admin-login-modern.css')}}" rel="stylesheet">
 </head>
 <body class="bg-gradient-primary">
     <div class="container">
@@ -68,5 +69,18 @@
     <script src="{{asset('backend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('backend/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
     <script src="{{asset('backend/js/sb-admin-2.min.js')}}"></script>
+    @php
+        session()->forget([
+            'message',
+            'error',
+            'success',
+            'warning',
+            'info',
+            'status',
+            'message_category_product',
+            'message_product',
+            'error_product',
+        ]);
+    @endphp
 </body>
 </html>
